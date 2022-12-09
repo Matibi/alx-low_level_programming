@@ -7,13 +7,13 @@
 */
 int main(void)
 {
-	char c;
+	char letter;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (letter = 'a'; letter <= 'z'; c++)
 	{
-		if (c == 'e' || c == 'q')
+		if (letter == 'e' || letter == 'q')
 			continue;
-		putchar(c);
+		putchar(letter);
 	}
 	putchar(10);
 	
