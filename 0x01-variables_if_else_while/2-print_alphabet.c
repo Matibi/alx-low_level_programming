@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
-* main - This is the main function
-* Description: Prints out the alphabet in lowercase followed by a new line
-* Return: The function returns 0
-*/
+ * main - Prints the alphabet in lowercase.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	char c;
+	char letter;
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		putchar(c);
-	}
-	putchar(10);
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+
+	putchar('\n');
+
 	return (0);
 }
