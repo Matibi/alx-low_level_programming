@@ -8,7 +8,7 @@
  */
 int mul(int a, int b)
 {
-	int answer = a * b;
+int answer = a * b;
 
-	return (answer);
+return (answer);
 }
