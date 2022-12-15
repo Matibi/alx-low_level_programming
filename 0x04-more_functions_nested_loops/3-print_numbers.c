@@ -2,14 +2,16 @@
 
 /**
  * main - check the code
- *
- * Return: Always 0.
+ * print_numbers - prints numbers from 0 to 9 followed by a new line
+ * Return: no return.
  */
 void print_numbers(void)
 {
-   for(int i=0;i<=9;i++)
-   {
-    _putchar(i);
-   }
-   _putchar('\n');
+   int i;
+
+	for (i = 48; i <= 57; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
