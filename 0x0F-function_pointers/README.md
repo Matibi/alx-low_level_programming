@@ -1,33 +1,28 @@
-# 0x0F. C - Function pointers
+0x0F. C - Function pointers
+Mandatory
 
-This repository explores the usages of pointers to functions.
+function_pointers.h - header file for 0-print_name.c, 1-array_iterator.c, and 2-int_index.c.
 
-## 0. print_name
+0-print_name.c - function that prints a name using a function given as a parameter.
 
-Prints a name using callbacks
+1-array_iterator.c - function that executes a function given as a parameter on each element of an array.
 
-## 1. array_iterator
+2-int_index.c - function that searches for an integer using a comparative function given as a parameter.
 
-Executes a function given as a parameter on each element of the array
+3-calc.h - header file for 3-main.c, 3-op_functions.c, and 3-get_op_func.c.
 
-> - `size` is the size of the array
-> - `action` is a pointer to the function needed to be used
+3-main.c - performs simple operations passed in as parameters.
 
-## 2. int_index
+3-op_functions.c - contains the following 5 functions:
 
-Searches for an integer
+    int op_add(int a, int b) - returns the sum of a and b.
+    int op_sub(int a, int b) - returns the difference of a and b.
+    int op_mul(int a, int b) - returns the product of a and b.
+    int op_div(int a, int b) - returns the result of the division of a by b.
+    int op_mod(int a, int b) - returns the remainder of the division of a by b.
 
-> - `size` is the number of elements in the array `array`
-> - `cmp` is a pointer to the function to be used to compare values
-> - `int_index` returns the index of the first element for which the `cmp` function does not return `0`
-> - if no element matches return `-1`
-> - if `size` <= `0` return `-1`
+3-get_op_func.c - selects the correct function from 3-op_functions.c to perform the operation asked by the user.
 
-## 3. A program that performs simple operations
+Advanced
 
-The program prints te result of the operation followed by a new line
- > - The result of all operations can be stored in an int
- > - if number of args is wrong print `Error` followed by a new line and exit with status `98`
- > - if the `operator` is none of the ones provided print `Error` followed by a new line and exit with status `99`
- > - if the user tries to divide (`/` or `%`) by `0`, print `Error` followed by a new line and exit with status `100`
-
+100-main_opcodes.c - prints the opcodes of its own main function up to a specified number of bytes.

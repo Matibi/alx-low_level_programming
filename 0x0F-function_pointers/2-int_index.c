@@ -1,24 +1,30 @@
 #include "function_pointers.h"
 
 /**
-* int_index - searches for an integer
-* @array: array passed
-* @size: size of array
-* @cmp: callback function
-*
-* Return: index of first element for which the cmp function does not return 0
-*/
+  * int_index - ...
+  * @array: ...
+  * @size: ...
+  * @cmp: ...
+  *
+  * Return: ...
+  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int i = 0;
 
-	if (array && size > 0 && cmp)
+	if (size > 0)
 	{
-		for (i = 0; i < size; i++)
+		if (array != NULL && cmp != NULL)
 		{
-			if (cmp(array[i]) != 0)
-				return (i);
+			while (i < size)
+			{
+				if (cmp(array[i]))
+					return (i);
+
+				i++;
+			}
 		}
 	}
+
 	return (-1);
 }
